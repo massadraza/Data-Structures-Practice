@@ -38,10 +38,7 @@ public class timeComplexityPrograms{
         
     }
 
-
-
-
-
+    // O(log n) Time Complexity Using a Binary Search Algorithm 
 
 
 }
