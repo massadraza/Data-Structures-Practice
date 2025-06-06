@@ -45,6 +45,3 @@ newStack.push(1234)
 newStack.push(12345)
 print(newStack.displayStack())
 print(newStack.peek())
-
-
-
