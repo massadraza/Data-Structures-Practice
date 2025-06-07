@@ -63,3 +63,5 @@ def is_match(b1, b2):
     
 print(is_paren_balanced("((({{}})))"))
 print(is_paren_balanced("[]["))
+
+# Analyzing test cases
