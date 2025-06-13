@@ -1,3 +1,6 @@
+# Massad Raza
+# Using stacks to convert a number into binary
+
 from stack import Stack
 
 def convert_int_to_bin(dec_num):
