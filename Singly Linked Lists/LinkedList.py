@@ -314,8 +314,41 @@ class LinkedList:
             prev.next = None
             self.head = last_Node
 
-        
+    # Challenge Question 2: Sum of Two Linked Lists
 
+
+    def sum_two_lists(self, llist):
+        p = self.head
+        q = llist.head
+
+        sum_llist = LinkedList()
+
+        carry = 0
+        while p or q:
+            if not p:
+                i = 0
+            else:
+                i = p.data
+            if not q:
+                j = 0
+            else:
+                j = q.data
+
+            s = i + j + carry
+
+            if s >= 10:
+                carry = 1
+                remainder = s % 10
+                sum_llist.append(remainder)
+            else:
+                carry = 0
+                sum_llist.append(s) 
+            if p:
+                p = p.next
+            if q:
+                q = q.next
+
+            sum_llist.print_list()
 
 
     
@@ -427,6 +460,19 @@ rotatingList.append(8)
 rotatingList.rotate(4)
 rotatingList.print_list()
 
+llistSumOne = LinkedList()
+
+llistSumOne.append(5)
+llistSumOne.append(6)
+llistSumOne.append(3)
+
+llistSumTwo = LinkedList()
+
+llistSumTwo.append(8)
+llistSumTwo.append(4)
+llistSumTwo.append(2)
+
+llistSumOne.sum_two_lists(llistSumTwo)
 
 
 
