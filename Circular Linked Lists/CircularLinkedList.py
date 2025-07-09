@@ -123,14 +123,6 @@ class CircularLinkedList:
                 return False
         else:
                 return False
-            
-
-
-
-
-
-
-
         
 
 # Functions to test circular linked list
@@ -145,4 +137,3 @@ circularList.prepend("1")
 circularList.prepend("2")
 circularList.split_list()
 print(" ")
-circularList.print_list()
