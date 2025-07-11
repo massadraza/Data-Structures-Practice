@@ -178,3 +178,4 @@ myTree.root.left.right = Node(5)
 
 
 print(myTree.size_(myTree.root))
+
