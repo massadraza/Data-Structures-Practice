@@ -34,9 +34,43 @@ class BST(object):
             if curr.data == find_value:
                 return True
             elif curr.data < find_value:
-                return self.search_helper
+                return self.search_helper(curr.right, find_value)
             else:
                 return self.search_helper(curr.left, find_value)
-        
+            
+    # Challenge: Create a method that will check whether the tree follows the BST property
 
-    
+    def is_bst_satisfied(self):
+         def helper(node, lower=float('-inf'), upper=float('inf')):
+             if not node:
+                 return True
+             
+             val = node.data
+             if val <= lower or val >= upper:
+                 return False
+             if not helper(node.right, val, upper):
+                 return False
+             if not helper(node.left, lower, val):
+                 return False
+             return True
+         
+         return helper(self.root)
+        
+bst = BST(4)
+bst.insert(2)
+bst.insert(8)
+bst.insert(5)
+bst.insert(10)
+#bst.insert(1335)
+
+#print(bst.search(9))    
+#print(bst.search(14))    
+#print(bst.search(2345))    
+
+anotherTree = BST(1)
+anotherTree.root.left = Node(2)
+anotherTree.root.right = Node(3)
+anotherTree.root.left.left = Node(4)
+
+print(bst.is_bst_satisfied())
+print(anotherTree.is_bst_satisfied())
